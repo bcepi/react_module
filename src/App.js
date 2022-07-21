@@ -1,52 +1,36 @@
 import './App.css'
-import Button from './Components/Button'
+// import CustomButton from './Components/Button'
+import List from './Components/List/list'
+
 import users from './Assets/users'
 
-function App() {
-  const buttons = [
+function App () {
+  console.log(users)
+  const testUser = [
     {
-      text: 'Botón 1',
-      color: 'primary'
-    },
-    {
-      text: 'Botón 2',
-      color: 'secondary'
-    },
-    {
-      text: 'Botón 3',
-      color: 'success'
-    },
-    {
-      text: 'Botón 4',
-      color: 'danger'
-    },
-    {
-      text: 'Botón 5',
-      color: 'warning'
+      gender: 'female',
+      name: {
+        title: 'Ms',
+        first: 'Milja',
+        last: 'Wuori'
+      },
+      dob: {
+        date: '1986-10-10T10:21:11.034Z',
+        age: 35
+      },
+      picture: {
+        large: 'https://randomuser.me/api/portraits/women/55.jpg',
+        medium: 'https://randomuser.me/api/portraits/med/women/55.jpg',
+        thumbnail: 'https://randomuser.me/api/portraits/thumb/women/55.jpg'
+      }
     }
   ]
   return (
     <div className='App'>
-      <div className='d-flex justify-content-between w-50 mt-3 mx-auto'>
-        {buttons
-          .filter(button => button.color !== 'primary')
-          .map((button, index) => {
-            <Card style = {{width: '18rem'}}>
-              <img alt="Card image" src="https://picsum.photos/300/200"/>
-              <CardBody>
-                <CardTitle tag="h5"> Card title </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6"> Card subtitle </CardSubtitle>
-                <CardText> Some quick example text to build on the card title and make up the bulk of the card's content. </CardText>
-              </CardBody>
-            </Card >
-          })}
-      </div>
+      <List data={users} />
+      <List data={testUser} />
     </div>
   )
-
-
-
 }
-
 
 export default App
