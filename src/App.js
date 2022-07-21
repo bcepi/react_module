@@ -1,34 +1,12 @@
 import './App.css'
-// import CustomButton from './Components/Button'
-import List from './Components/List/list'
+import Products from './Mocks/products'
+import List from './Components/List/index'
 
-import users from './Assets/users'
 
 function App () {
-  console.log(users)
-  const testUser = [
-    {
-      gender: 'female',
-      name: {
-        title: 'Ms',
-        first: 'Milja',
-        last: 'Wuori'
-      },
-      dob: {
-        date: '1986-10-10T10:21:11.034Z',
-        age: 35
-      },
-      picture: {
-        large: 'https://randomuser.me/api/portraits/women/55.jpg',
-        medium: 'https://randomuser.me/api/portraits/med/women/55.jpg',
-        thumbnail: 'https://randomuser.me/api/portraits/thumb/women/55.jpg'
-      }
-    }
-  ]
   return (
     <div className='App'>
-      <List data={users} />
-      <List data={testUser} />
+      <List data={Products} />
     </div>
   )
 }
