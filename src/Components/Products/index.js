@@ -9,10 +9,10 @@ const ProductCard = props => {
 
         if(rating<3){
             ratingColor = 'text-danger'
-        } else if(3<rating<4.5){
+        } else if(3<rating && rating<4.5){
             ratingColor= 'text-warning'
         } else if (rating> 4.5){
-            ratingColor ='text-success'
+            ratingColor = 'text-success'
         } else{
             ratingColor='text-muted'
         }
